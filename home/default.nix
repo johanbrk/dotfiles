@@ -24,6 +24,6 @@
 
   programs.anki = {
     enable = true;
-    addons = with pkgs.ankiAddons; [ review-heatmap ];
+    addons = with pkgs.ankiAddons; [ review-heatmap anki-connect ];
   };
 }
