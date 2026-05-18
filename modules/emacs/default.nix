@@ -82,6 +82,7 @@
         auctex
         cdlatex
         org-fragtog
+        anki-editor
 
         # Themes.
         doom-themes
