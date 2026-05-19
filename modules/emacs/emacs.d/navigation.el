@@ -186,4 +186,6 @@ With optional argument FRAME, return the list of buffers of FRAME."
               ("^"   . (lambda () (interactive) (find-alternate-file "..")))))
 
 (use-package dirvish
-  :config (dirvish-override-dired-mode))
+  :config
+  (setq dirvish-default-layout '(0 0 0.55))
+  (dirvish-override-dired-mode))
