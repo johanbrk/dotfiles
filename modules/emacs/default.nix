@@ -77,6 +77,7 @@
         vundo
         try
         pdf-tools
+        dirvish
 
         # Latex.
         auctex

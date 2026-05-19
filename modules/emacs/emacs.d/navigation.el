@@ -83,10 +83,13 @@
   :config (zoom-mode)
 
   :custom
+  (zoom-ignored-major-modes '(dired-mode
+                              dirvish-mode dirvish-directory-view-mode
+                              dirvish-misc-mode dirvish-special-preview-mode))
   (zoom-size (lambda ()
-                (if (not (derived-mode-p 'eat-mode))
-                    '(0.618 . 0.716)
-                  '(0.618 . 0.382)))))
+               (cond
+                ((derived-mode-p 'eat-mode) '(0.618 . 0.382))
+                (t                          '(0.618 . 0.707))))))
 
 ;; Puni allows for smarter parenthesis behavior.
 (use-package puni
@@ -182,3 +185,5 @@ With optional argument FRAME, return the list of buffers of FRAME."
               ("a"   . dired-find-file)
               ("^"   . (lambda () (interactive) (find-alternate-file "..")))))
 
+(use-package dirvish
+  :config (dirvish-override-dired-mode))
