@@ -17,7 +17,7 @@
   ;; Decrease default latex fragment size.
   (org-mode . (lambda ()
                 (setq org-format-latex-options
-                      (plist-put org-format-latex-options :scale 0.6))))
+                      (plist-put org-format-latex-options :scale 0.8))))
   (latex-mode . 'turn-on-cdlatex))
 
 
@@ -28,3 +28,6 @@
 
 (use-package tex
   :ensure auctex)
+
+(use-package anki-editor
+  :custom (anki-editor-latex-style 'mathjax))
