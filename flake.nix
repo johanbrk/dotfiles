@@ -42,6 +42,8 @@
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-bwrapper.url = "https://flakehub.com/f/Naxdy/nix-bwrapper/*";
   };
 
   outputs = { nixpkgs, home-manager, nixpkgs-stable, ... }@inputs:
@@ -68,6 +70,7 @@ in {
 
       inputs.stylix.nixosModules.stylix
       inputs.impermanence.nixosModules.impermanence
+      inputs.nix-bwrapper.nixosModules.default
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;

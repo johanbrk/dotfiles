@@ -2,6 +2,15 @@
   modules.librewolf.home = {pkgs, inputs, ...}: {
     programs.librewolf = {
       enable = true;
+      package = pkgs.mkBwrapper {
+        imports = [ pkgs.bwrapperPresets.desktop ];
+        app = {
+          package = pkgs.librewolf;
+          runScript = "librewolf";
+        };
+        sockets.x11 = false;
+        mounts.readWrite = [ "~/Downloads" ];
+      };
 
       profiles.default = {
         isDefault = true;
