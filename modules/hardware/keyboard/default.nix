@@ -39,5 +39,14 @@
 
         inject_delay = 5;
       };
+
+    xdg.configFile."espanso/match/accents.yml".source =
+      yamlFormat.generate "espanso-config-accents.yml" {
+        matches = [
+          { trigger = ":ss";  replace = "ß"; }
+          { trigger = ":u\""; replace = "ü"; }
+          { trigger = ":U\""; replace = "Ü"; }
+        ];
+      };
   };
 }
