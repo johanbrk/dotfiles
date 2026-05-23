@@ -9,7 +9,7 @@
           runScript = "librewolf";
         };
         sockets.x11 = false;
-        mounts.readWrite = [ "~/Downloads" ];
+        mounts.readWrite = [ "$HOME/Downloads" "$HOME/.librewolf" ];
       };
 
       profiles.default = {
