@@ -36,7 +36,7 @@
 
   system.autoUpgrade = {
     enable = true;
-    dates = "daily";
+    dates = "weekly";
     flake = "github:JohannesBarjak/dotfiles#main";
   };
 
