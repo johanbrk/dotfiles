@@ -46,6 +46,10 @@
           { trigger = ":ss";  replace = "ß"; }
           { trigger = ":u\""; replace = "ü"; }
           { trigger = ":U\""; replace = "Ü"; }
+          { trigger = ":a\""; replace = "ä"; }
+          { trigger = ":A\""; replace = "Ä"; }
+          { trigger = ":o\""; replace = "ö"; }
+          { trigger = ":O\""; replace = "Ö"; }
         ];
       };
   };
