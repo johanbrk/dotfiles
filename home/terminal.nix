@@ -60,6 +60,9 @@
     extraConfig = "$env.LS_COLORS = (vivid generate stylix)";
   };
 
+  # Add extra autoloads file for useful nushell scripts.
+  xdg.configFile."nushell/autoload/extra.nu".source = ./extra.nu;
+
   # Enable direnv to automatically enter nix shell environments.
   programs.direnv = {
     enable = true;
