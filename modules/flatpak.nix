@@ -17,11 +17,9 @@
 
       packages = [
         "flathub:app/ch.tlaun.TL//stable"
-        "flathub:app/com.brave.Browser//stable"
         "flathub:app/com.github.Anuken.Mindustry//stable"
         "flathub:app/com.usebottles.bottles//stable"
         "flathub:app/io.github.flattool.Warehouse//stable"
-        "flathub:app/net.mullvad.MullvadBrowser//stable"
         "flathub:app/net.veloren.airshipper//stable"
         "flathub:app/org.libreoffice.LibreOffice//stable"
         "flathub:app/org.onlyoffice.desktopeditors//stable"
