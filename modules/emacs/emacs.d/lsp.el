@@ -33,6 +33,8 @@
 (use-package idris2-mode)
 (use-package racket-mode)
 
+(use-package fennel-mode)
+
 ;; Install mode for lean4 proof assistant.
 ;; Fix: Emacs use-package declarations are order sensitive.
 (use-package nael

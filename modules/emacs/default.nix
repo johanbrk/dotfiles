@@ -47,6 +47,7 @@
         bqn-mode
         j-mode
         racket-mode
+        fennel-mode
         treesit-grammars.with-all-grammars
 
         # Code completion plugins.
