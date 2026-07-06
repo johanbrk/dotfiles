@@ -38,6 +38,7 @@
         search_shortcut = "CTRL+ALT+META+SPACE";
 
         inject_delay = 5;
+        pre_paste_delay = 100;
       };
 
     xdg.configFile."espanso/match/accents.yml".source =
