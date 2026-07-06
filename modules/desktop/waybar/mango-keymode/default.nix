@@ -4,7 +4,7 @@
       type = lib.types.package;
       default = (pkgs.runCommand "mmsgKeymode"
         { nativeBuildInputs = [ pkgs.stdenv.cc ]
-        ; MMSG_PATH = "${pkgs.mangowc}/bin/mmsg";
+        ; MMSG_PATH = "${pkgs.mango}/bin/mmsg";
         } ''
           mkdir -p $out/bin
           ${pkgs.rustc}/bin/rustc \

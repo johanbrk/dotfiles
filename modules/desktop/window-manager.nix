@@ -25,7 +25,7 @@
       enable = true;
       waylandCompositors = {
         mango = {
-          binPath = "${pkgs.mangowc}/bin/mango";
+          binPath = "${pkgs.mango}/bin/mango";
           prettyName = "MangoWC";
           comment = "A feature rich Wayland compositor.";
         };
