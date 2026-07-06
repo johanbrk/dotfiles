@@ -13,7 +13,6 @@
     musescore
     (hunspell.withDicts (d: [ d.en-us-large ]))
     zip unzip
-    xournalpp
 
     # Add custom system update script to system path.
     (writeShellApplication {
