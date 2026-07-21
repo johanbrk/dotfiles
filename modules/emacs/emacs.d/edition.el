@@ -30,7 +30,7 @@
 
 ;; This package provides semantic region expansion.
 (use-package expand-region
-  :bind ("C-c e" . er/expand-region))
+  :bind ("C-=" . er/expand-region))
 
 ;; An undo-tree for Emacs.
 (use-package vundo
