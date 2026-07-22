@@ -34,7 +34,8 @@ multiRules =
     };
   }) rules));
 in {
-  modules.opensnitch.nixos = {pkgs, ...}: {
+  modules.opensnitch.nixos = {config, pkgs, ...}:
+  let hm = config.home-manager.users.${config.stgs.user.name}; in {
     services.opensnitch = {
       enable = true;
       settings.ProcMonitorMethod = "ebpf";
@@ -49,6 +50,14 @@ in {
 
         (multiRules
           [
+            {
+              name = "librewolf";
+              list = [
+                (genRule "regexp" "process.path" "^/nix/store/[0-9a-z]{32}-librewolf-.*/lib/librewolf/librewolf")
+                (genRule "simple" "process.command" "/usr/bin/librewolf")
+              ];
+            }
+
             {
               name = "systemd-timesyncd";
               list = [
@@ -85,7 +94,7 @@ in {
     services.opensnitch-ui.enable = true;
 
     systemd.user.services.opensnitch-ui.Service = {
-      MemoryHigh = "60M";
+      MemoryHigh = "70M";
       MemoryAccounting = true;
     };
   };
