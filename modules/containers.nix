@@ -6,7 +6,9 @@
     };
   };
 
-  modules.containers.home = {...}: {
+  modules.containers.home = {pkgs, ...}: {
+    home.packages = [ pkgs.distroshelf ];
+
     programs.distrobox = {
       enable = true;
     };
