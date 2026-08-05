@@ -53,15 +53,33 @@ in {
             {
               name = "librewolf";
               list = [
-                (genRule "regexp" "process.path" "^/nix/store/[0-9a-z]{32}-librewolf-.*/lib/librewolf/librewolf")
+                (genRule "regexp" "process.path" "^/nix/store/[0-9a-z]{32}-librewolf-.*/lib/librewolf/librewolf$")
                 (genRule "simple" "process.command" "/usr/bin/librewolf")
+              ];
+            }
+
+            {
+              name = "systemd-resolved";
+              list = [
+                (genRule "simple" "process.path" "${config.systemd.package}/lib/systemd/systemd-resolved")
+                (genRule "regexp" "dest.port" "^(53|853)$")
+              ];
+            }
+
+            {
+              name = "nix-daemon";
+              list = [
+                (genRule "simple" "dest.host" "cache.nixos.org")
+                (genRule "simple" "process.path" "${config.nix.package}/bin/nix")
+                (genRule "regexp" "process.command" "^nix-daemon \\d*$")
               ];
             }
 
             {
               name = "systemd-timesyncd";
               list = [
-                (genRule "regexp" "dest.host" "\\d\\.nixos\\.pool\\.ntp\\.org")
+                (genRule "simple" "user.id" "systemd-timesync")
+                (genRule "simple" "dest.port" "123")
                 (genRule "simple" "process.path" "${pkgs.systemd}/lib/systemd/systemd-timesyncd")
               ];
             }
