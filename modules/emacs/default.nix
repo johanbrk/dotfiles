@@ -14,7 +14,7 @@
     };
 
     home.packages = [
-      pkgs.texlive.combined.scheme-full
+      (pkgs.texlive.withPackages (ps: [ ps.scheme-medium ]))
     ];
 
     # Main gui text editor.
