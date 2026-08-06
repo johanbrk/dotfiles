@@ -78,7 +78,7 @@ in {
             {
               name = "systemd-timesyncd";
               list = [
-                (genRule "simple" "user.id" "systemd-timesync")
+                (genRule "simple" "user.name" "systemd-timesync")
                 (genRule "simple" "dest.port" "123")
                 (genRule "simple" "process.path" "${pkgs.systemd}/lib/systemd/systemd-timesyncd")
               ];
