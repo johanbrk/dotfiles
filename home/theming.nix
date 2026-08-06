@@ -9,6 +9,8 @@
   # Cursor theme.
   home.pointerCursor = {
     name = "Adwaita";
+    enable = true;
+
     package = pkgs.adwaita-icon-theme;
     size = 24;
 

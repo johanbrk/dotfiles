@@ -143,8 +143,9 @@
 
   # Add common terminal utilities.
   programs.fd.enable = true;      # Finder.
-  programs.fzf.enable = true;     # Fuzzy search.
   programs.ripgrep.enable = true; # Modern grep.
+  programs.fzf.enable = true;     # Fuzzy search.
+  programs.fzf.historyWidget.command = "";
 
   # Modern terminal file viewer.
   programs.bat.enable = true;
