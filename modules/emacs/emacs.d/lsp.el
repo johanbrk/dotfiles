@@ -5,7 +5,6 @@
   :hook					; Add language hooks.
   (haskell-ts-mode . eglot-ensure)
   (nix-ts-mode     . eglot-ensure)
-  (python-ts-mode  . eglot-ensure)
 
   :custom
   (eglot-autoshutdown t) ; shutdown language server after closing last file.
