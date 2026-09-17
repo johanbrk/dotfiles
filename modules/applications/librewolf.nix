@@ -37,7 +37,7 @@
             canvasblocker
             tridactyl
             localcdn
-            umatrix
+            numatrix
             auto-tab-discard
             libredirect
           ];
