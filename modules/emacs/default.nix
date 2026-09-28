@@ -49,6 +49,7 @@
         racket-mode
         fennel-mode
         treesit-grammars.with-all-grammars
+        fuel
 
         # Code completion plugins.
         corfu

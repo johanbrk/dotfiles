@@ -46,6 +46,13 @@
 
 (use-package pdf-tools)
 
+(use-package fuel
+  :config
+  ;; Redirect fuel to the correct factor directory.
+  (when-let ((factor-bin (file-truename (executable-find "factor"))))
+    (setq fuel-listener-factor-binary factor-bin)
+    (setq fuel-factor-root-dir (expand-file-name "../../lib/factor" factor-bin))))
+
 ;; Uiua mode.
 (use-package uiua-ts-mode :mode "\\.ua\\'")
 
