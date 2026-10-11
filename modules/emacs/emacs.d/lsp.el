@@ -64,6 +64,9 @@
 (use-package kanata-kbd-mode
   :vc (:url "https://github.com/chmouel/kanata-kbd-mode/" :rev :newest))
 
+(use-package janet-ts-mode
+  :vc (:url "https://github.com/sogaiu/janet-ts-mode" :rev :newest))
+
 (use-package j-mode
   ;; Change the binary name for the J programming language.
   :custom (j-console-cmd "jconsole")
