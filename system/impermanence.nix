@@ -21,6 +21,11 @@
 
         # If this directory is not persisted timers won't persist.
         "/var/lib/systemd/timers"
+
+        # Persist printing directories.
+        "/var/cache/cups"
+        "/var/spool/cups"
+        "/var/lib/cups"
       ];
 
       # Persist files.
