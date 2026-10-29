@@ -62,7 +62,7 @@ in {
               name = "systemd-resolved";
               list = [
                 (genRule "simple" "process.path" "${config.systemd.package}/lib/systemd/systemd-resolved")
-                (genRule "regexp" "dest.port" "^(53|853)$")
+                (genRule "regexp" "dest.port" "^(53|853|5355)$")
               ];
             }
 
