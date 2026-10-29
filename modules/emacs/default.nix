@@ -1,8 +1,15 @@
 {inputs, ...}: {
-  modules.emacs.nixos = {...}: {
+  modules.emacs.nixos = {config, ...}: {
     # Declare emacs system overlay.
     nixpkgs.overlays = [
       inputs.emacs-overlay.overlays.default
+    ];
+
+    # Emacs directories to persist.
+    environment.persistence."/persistent"
+    .users.${config.stgs.user.name}.directories = [
+      ".config/emacs/elpa"
+      ".config/emacs/persist"
     ];
   };
 

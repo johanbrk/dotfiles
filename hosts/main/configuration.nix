@@ -3,7 +3,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./system
-      /${rootPath}/system/impermanence.nix
     ];
 
   # Enable flakes.

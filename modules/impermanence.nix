@@ -1,5 +1,5 @@
-{config, ...}: {
-  config = {
+{...}: {
+  modules.impermanence.nixos = {config, ...}: {
     environment.persistence."/persistent" = {
       hideMounts = true;
       # Persist directories and all subdirectories.
@@ -64,11 +64,10 @@
           ".config/opensnitch"    # Opensnitch-ui configuration.
           ".librewolf"
 
-          # Emacs directories to persist.
-          ".config/emacs/elpa"
-          ".config/emacs/persist"
-
           ".config/espanso/match/packages"
+
+          # Syncthing state.
+          ".local/state/syncthing"
         ];
 
         # User files.
