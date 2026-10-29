@@ -48,8 +48,6 @@
   boot.kernelPackages = pkgs.linuxPackages_6_18; # Temporarily fix to 6.18 to prevent opensnitchd bug.
   boot.supportedFilesystems = [ "ntfs" ];
 
-  boot.initrd.systemd.enable = true;
-
   boot.plymouth = {
     enable = true;
 
@@ -202,7 +200,7 @@
   # Switch to a faster dbus implementation.
   services.dbus.implementation = "broker";
 
-  services.journald.extraConfig = "SystemMaxUse=50M";
+  services.journald.settings.Journal.SystemMaxUse = "50M";
 
   stgs.user.name = "johannes";
   stgs.user.wm = "mango";

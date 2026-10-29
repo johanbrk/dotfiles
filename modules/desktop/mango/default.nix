@@ -28,7 +28,7 @@
       enable = true;
       extraConfig = builtins.readFile ./config.conf;
       settings = with config.lib.stylix.colors; {
-        exec-once = [
+        exec_once = [
           "${pkgs.swaybg}/bin/swaybg -i ${config.stylix.image}"
         ];
 
@@ -36,14 +36,14 @@
           "${config.xdg.configHome}/mango/autostart.sh"
         ];
 
-        rootcolor = "0x${base00}ff";
-        bordercolor = "0x${base03}ff";
-        focuscolor = "0x${base0D}ff";
-        maximizescreencolor = "0x${base0D}ff";
-        urgentcolor = "0x${base08}ff";
-        scratchpadcolor = "0x${base0C}ff";
-        globalcolor = "0x${base0E}ff";
-        overlaycolor = "0x${base0B}ff";
+        root_color = "0x${base00}ff";
+        border_color = "0x${base03}ff";
+        focus_color = "0x${base0D}ff";
+        maximized_screen_color = "0x${base0D}ff";
+        urgent_color = "0x${base08}ff";
+        scratchpad_color = "0x${base0C}ff";
+        global_color = "0x${base0E}ff";
+        overlay_color = "0x${base0B}ff";
 
         bind = [
           "None,XF86MonBrightnessUp,spawn,brightnessctl set 5%+"
