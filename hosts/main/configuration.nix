@@ -4,7 +4,6 @@
       ./hardware-configuration.nix
       ./system
       /${rootPath}/system/impermanence.nix
-      /${rootPath}/system/systemd-hardening.nix
     ];
 
   # Enable flakes.
