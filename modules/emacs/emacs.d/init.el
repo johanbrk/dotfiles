@@ -28,6 +28,7 @@
      (set-fontset-font t 'braille (font-spec :family font) frame 'prepend)))
 
   (my/setup-braille-font)
+  (set-face-attribute 'default nil :family "FiraCode Nerd Font Mono" :height 105)
 
   (load "auctex.el" nil t t)
   (setq TeX-auto-save t)

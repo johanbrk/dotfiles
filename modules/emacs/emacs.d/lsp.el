@@ -17,15 +17,25 @@
 ;; Haskell mode configuration.
 (use-package haskell-ts-mode)
 
-;; Fira Code font for Emacs.
-;; Remember to run fira-code-mode-install-fonts so that ligatures are rendered.
-(use-package fira-code-mode
+;; Ligatures support for Emacs.
+(use-package ligature
   :hook
   (prog-mode
    . (lambda () (when (display-graphic-p)
-             (fira-code-mode 1))))
+             (ligature-mode 1))))
 
-  :custom (fira-code-mode-disabled-ligatures '("x")))
+  :config
+  (ligature-set-ligatures
+   'prog-mode '("www" "**"  "***" "**/" "*>"  "*d/"  "\\\\" "{-"   "::"  ":::"
+                ":="  "!!"  "!="  "!==" "-}"  "----" "-->"  "->"   "->>" "-<"
+                "-<<" "-~"  "#{"  "#["  "##"  "###"  "####" "#("   "#?"  "#_"
+                "#_(" ".-"  ".="  ".."  "..<" "..."  "?="   "??"   ";;"  "/*" "/**"
+                "/="  "/==" "/>"  "//"  "///" "&&"   "||"   "||="  "|="  "|>" "^="
+                "++"  "+++" "+>"  "=:=" "=="  "==="  "==>"  "=>"   "=>>" "<=" "$>"
+                "=<<" "=/=" ">-"  ">="  ">=>" ">>"   ">>-"  ">>="  ">>>" "<*"
+                "<*>" "<|"  "<|>" "<$"  "<$>" "<!--" "<-"   "<--"  "<->" "<+"
+                "<+>" "<="  "<==" "<=>" "<=<" "<>"   "<<"   "<<-"  "<<=" "<<<"
+                "<~"  "<~~" "</"  "</>" "~@"  "~-"   "~>"   "~~"   "~~>" "%%")))
 
 ;; More language modes.
 (use-package nix-ts-mode :mode "\\.nix\\'")

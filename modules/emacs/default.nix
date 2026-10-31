@@ -98,7 +98,7 @@
         doom-themes
         base16-theme
         org-superstar
-        fira-code-mode
+        ligature
       ];
 
       package = (pkgs.emacs-igc-pgtk.overrideAttrs (prev: {
