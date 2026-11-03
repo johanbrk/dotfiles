@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   imports = [
-    ./niri.nix
     ./terminal.nix
     ./theming.nix
   ];

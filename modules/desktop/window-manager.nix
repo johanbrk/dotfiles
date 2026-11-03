@@ -1,7 +1,7 @@
 {lib, ...}: {
   modules.wm.nixos = {...}: {
     options.stgs.user.wm = lib.mkOption {
-      type = lib.types.enum [ "mango" "sway" "niri" ];
+      type = lib.types.enum [ "mango" "sway" ];
       description = "Which window manager to enable.";
     };
 

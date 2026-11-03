@@ -13,11 +13,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     flatpaks.url = "github:in-a-dil-emma/declarative-flatpak/latest";
 
     # Nur firefox addons.
@@ -77,7 +72,6 @@ in {
         home-manager.users.johannes = {
           imports = [
             ./hosts/main/home
-            inputs.niri.homeModules.niri
           ] ++ homeModules;
         };
 
