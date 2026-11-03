@@ -45,6 +45,19 @@
         global_color = "0x${base0E}ff";
         overlay_color = "0x${base0B}ff";
 
+        tab_bar_decorate_fg_color = "0x${base04}ff";
+        tab_bar_decorate_focus_fg_color = "0x${base05}ff";
+
+        tab_bar_decorate_bg_color = "0x${base01}ff";
+        tab_bar_decorate_focus_bg_color = "0x${base00}ff";
+
+        tab_bar_decorate_border_color = "0x${base0D}ff";
+        tab_bar_decorate_border_width = 2;
+
+        tab_bar_decorate_font_desc = "FiraCode Nerd Font Propo Regular 12";
+        tab_bar_height = 27;
+
+
         bind = [
           "None,XF86MonBrightnessUp,spawn,brightnessctl set 5%+"
           "None,XF86MonBrightnessDown,spawn,brightnessctl set 5%-"
