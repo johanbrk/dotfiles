@@ -39,6 +39,7 @@
     };
 
     nix-bwrapper.url = "https://flakehub.com/f/Naxdy/nix-bwrapper/*";
+    nix-alien.url = "github:thiagokokada/nix-alien";
   };
 
   outputs = { nixpkgs, home-manager, nixpkgs-stable, ... }@inputs:
