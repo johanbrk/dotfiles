@@ -1,12 +1,4 @@
 {pkgs, config, ...}: {
-  home.packages = with pkgs; [
-    nixd markdown-oxide taplo
-    typst tinymist
-    bash-language-server shellcheck
-    vscode-langservers-extracted
-    tealdeer
-  ];
-
   # Better cli interface for nixos.
   programs.nh.enable = true;
 
@@ -63,39 +55,6 @@
   # Add extra autoloads file for useful nushell scripts.
   xdg.configFile."nushell/autoload/extra.nu".source = ./extra.nu;
 
-  # Enable direnv to automatically enter nix shell environments.
-  programs.direnv = {
-    enable = true;
-    enableNushellIntegration = true;
-
-    # Nix direnv integration.
-    nix-direnv.enable = true;
-  };
-
-  # Correct incorrect commands in the shell.
-  programs.pay-respects = {
-    enable = true;
-    enableNushellIntegration = true;
-  };
-
-  # Git configuration.
-  programs.git = {
-    enable = true;
-
-    settings = {
-      pull.rebase = true;
-      http.postBuffer = 10485760; # Set git file size limit in bytes.
-    };
-  };
-
-  # Use delta for git diff.
-  programs.delta = {
-    enable = true;
-    enableGitIntegration = true;
-  };
-
-  programs.lazygit.enable = true;
-
   # Primary document viewer.
   programs.zathura.enable = true;
 
@@ -128,12 +87,6 @@
 
   # Btop is a htop-like resource monitor.
   programs.btop.enable = true;
-
-  # Tui file manager.
-  programs.yazi = {
-    enable = true;
-    enableNushellIntegration = true;
-  };
 
   # Zoxide is an autojumping cd.
   programs.zoxide = {
