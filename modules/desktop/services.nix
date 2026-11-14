@@ -11,6 +11,7 @@
       settings = {
         main = {
           border-radius = 10;
+          max-width = 400;
         };
       };
     };
