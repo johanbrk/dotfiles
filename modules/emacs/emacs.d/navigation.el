@@ -95,26 +95,30 @@
 (use-package puni
   :defer t
   :init (puni-global-mode)
+  :config
+  (transient-define-prefix my/puni-actions ()
+    "Do interactive puni actions."
+    [["Quick Transformations"
+      ("z" "Copy list around point, and delete sexp around point."  puni-squeeze)
+      ("r" "Replace sexp around point with sexp at/or after point." puni-raise)
+      ("c" "Exchange application order of two closest outer forms." puni-convolute)
+      ("l" "Remove the delimiters of sexp around point."            puni-splice)
+      ("s" "Split the list around point into two sexps."            puni-split)
+      ("t" "Swap the sexp before and after point."                  puni-transpose)
+      ]
+     ["Expression Wrapping"
+      (";" "Wrap (sexp) " puni-wrap-round)
+      ("p" "Wrap [sexp]" puni-wrap-square)
+      ("." "Wrap {sexp}" puni-wrap-curly)
+      (">" "Wrap <sexp>" puni-wrap-angle)
+      ]
+     ["Slurping and Barfing"
+      ("f" "Engulf forward."    puni-slurp-forward  :transient t)
+      ("b" "Engulf backward."   puni-slurp-backward :transient t)
+      ("F" "Spit from infront." puni-barf-forward   :transient t)
+      ("B" "Spit from behind."  puni-barf-backward  :transient t)]])
   :bind
-  ;; Useful puni actions.
-  ("C-c s" . puni-squeeze)
-  ("C-c d r" . puni-raise)
-  ("C-c d c" . puni-convolute)
-  ("C-c d d" . puni-splice)
-  ("C-c d s" . puni-split)
-  ("C-c d t" . puni-transpose)
-
-  ;; Commands to Wrap expressions.
-  ("C-c w r" . puni-wrap-round)
-  ("C-c w s"  . puni-wrap-square)
-  ("C-c w c"  . puni-wrap-curly)
-  ("C-c w a"  . puni-wrap-angle)
-
-  ;; Add slurp and barf commands to Emacs.
-  ("M-<right>" . puni-slurp-forward)
-  ("M-<left>"  . puni-slurp-backward)
-  ("M-<up>"    . puni-barf-forward)
-  ("M-<down>"  . puni-barf-backward))
+  ("C-c p" . my/puni-actions))
 
 (use-package tab-bar
   :custom

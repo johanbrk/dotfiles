@@ -46,6 +46,9 @@
   ("C-c c" . my/spellcheck-til-line-end)
   ("M-RET" . eat))
 
+;; Load transient package for custom keybind modes.
+(use-package transient)
+
 ;; Add kitty terminal protocol extension for terminal compatibility.
 (use-package kkp
   :config (global-kkp-mode t))
