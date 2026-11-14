@@ -3,8 +3,8 @@
 ;; Use eglot as my lsp manager.
 (use-package eglot
   :hook					; Add language hooks.
-  (haskell-ts-mode . eglot-ensure)
-  (nix-ts-mode     . eglot-ensure)
+  (haskell-mode . eglot-ensure)
+  (nix-ts-mode  . eglot-ensure)
 
   :custom
   (eglot-autoshutdown t) ; shutdown language server after closing last file.
@@ -15,7 +15,7 @@
   :hook (after-init . envrc-global-mode))
 
 ;; Haskell mode configuration.
-(use-package haskell-ts-mode)
+(use-package haskell-mode)
 
 ;; Ligatures support for Emacs.
 (use-package ligature

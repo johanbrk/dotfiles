@@ -46,7 +46,7 @@
 
         # Language modes.
         idris2-mode
-        haskell-ts-mode
+        haskell-mode
         nix-ts-mode
         markdown-mode
         nushell-mode
