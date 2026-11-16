@@ -4,10 +4,12 @@
       enable = true;
       package = pkgs.mkBwrapper {
         imports = [ pkgs.bwrapperPresets.desktop ];
+
         app = {
           package = pkgs.librewolf;
           runScript = "librewolf";
         };
+
         sockets.x11 = false;
         mounts.readWrite = [ "$HOME/.librewolf" ];
       };
