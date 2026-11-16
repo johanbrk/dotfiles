@@ -6,23 +6,22 @@
       package = pkgs.rofi;
 
       theme = config.rofi.theme;
-      font = "Cousine Nerd Font Propo";
 
       # Add calculator plugin to rofi.
       plugins = [
         pkgs.rofi-calc
       ];
 
-      modes = [ "drun" "window" "combi" ];
-
-      extraConfig = {
+      settings = {
         show-icons = true;
+        font = "Cousine Nerd Font Propo";
 
         # Change modi default text to icons.
         display-drun = "󰀻 ";
         display-window = "";
 
         combi-modes = [ "drun" "window" ];
+        modes = [ "drun" "window" "combi" ];
 
         # Prefer fuzzy searching.
         sort = true;
