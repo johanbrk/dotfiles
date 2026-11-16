@@ -98,6 +98,8 @@
   programs.fd.enable = true;      # Finder.
   programs.ripgrep.enable = true; # Modern grep.
   programs.fzf.enable = true;     # Fuzzy search.
+
+  # Disable fzf C-r command since atuin should be the main history manager.
   programs.fzf.historyWidget.command = "";
 
   # Modern terminal file viewer.
