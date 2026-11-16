@@ -23,7 +23,9 @@
 
   ("C->" . 'mc/mark-next-like-this)
   ("C-<" . 'mc/mark-previous-like-this)
-  ("C-c C-<" . 'mc/mark-all-like-this))
+  ("C-c C-<" . 'mc/mark-all-like-this)
+  ;; Reverse regions, which acts like transpose-regions for 2 regions.
+  (:map mc/keymap ("M-T" . mc/reverse-regions)))
 
 ;; Wgrep is a powerful grep editing plugin.
 (use-package wgrep)
