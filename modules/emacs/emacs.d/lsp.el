@@ -45,10 +45,7 @@
 (use-package fennel-mode)
 
 ;; Install mode for lean4 proof assistant.
-;; Fix: Emacs use-package declarations are order sensitive.
 (use-package nael
-  :vc ( :lisp-dir "nael"
-        :url "https://codeberg.org/mekeor/nael.git")
   ;; Add hooks for lean4 files.
   :hook
   (nael-mode . eglot-ensure)

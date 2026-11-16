@@ -46,6 +46,7 @@
 
         # Language modes.
         idris2-mode
+        nael
         haskell-mode
         nix-ts-mode
         markdown-mode
