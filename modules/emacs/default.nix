@@ -38,6 +38,7 @@
         expand-region
         orderless
         puni
+        move-text
         activities
         beframe
 

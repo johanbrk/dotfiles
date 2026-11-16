@@ -38,3 +38,6 @@
 (use-package vundo
   :bind ("C-c u" . vundo))
 
+(use-package move-text
+  :config (move-text-default-bindings))
+
