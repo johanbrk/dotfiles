@@ -41,6 +41,7 @@
         pre_paste_delay = 100;
       };
 
+    # Language accents.
     xdg.configFile."espanso/match/accents.yml".source =
       yamlFormat.generate "espanso-config-accents.yml" {
         matches = [
@@ -51,6 +52,15 @@
           { trigger = ":A\""; replace = "Ä"; }
           { trigger = ":o\""; replace = "ö"; }
           { trigger = ":O\""; replace = "Ö"; }
+        ];
+      };
+
+    # Website related configuration.
+    xdg.configFile."espanso/match/web.yml".source =
+      yamlFormat.generate "espanso-config-web.yml" {
+        matches = [
+          # Most search engines use this same pattern to restrict searches to a website.
+          { trigger = ":swom";  replace = "site:www.$|$.com"; }
         ];
       };
   };
