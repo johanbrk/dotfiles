@@ -35,9 +35,9 @@
 
 (deflayer symbols
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _     S-[  S-]  _    _   _    _    _    _    [    ]    _   _     _
-  _      S-1  S-2  S-3  S-4  S-5  S-6  S-7  S-8  S-9  S-0  \    _
-  _       [    ]    -    \    _    \    =    S-[  S-]  _    _
+  _     [    S-9  S-0  ]    S-,  S-.  [    S-9  S-0  ]    _   _     _
+  _      1    2    3    4    5    6    7    8    9    0    _   _
+  _       /    -    =    apo  \    apo  =    -    /    _    _
   _       _    _              _              @mst _    _    _    _    _
                                                             _    _    _)
 
@@ -51,10 +51,10 @@
 
 (defalias
   ;; Double use keys.
-  cec (tap-hold-press 0   200 esc (multi met ctl alt sft))
-  ap (tap-hold-release 200 200 apo (multi met ctl alt sft))
-  etc (tap-hold-press 200 200 ent  ctl)
-  bka (tap-hold-press 200 200 bks (layer-while-held symbols))
+  cec (tap-hold-press   0   200 esc (multi met ctl alt sft))
+  ap  (tap-hold-release 200 200 apo (multi met ctl alt sft))
+  etc (tap-hold-press   200 200 ent (layer-while-held symbols))
+  bka (tap-hold-press   200 200 bks (layer-while-held symbols))
 
   ;; Basic home row mods.
   a (tap-hold-release 200 200 a met)
