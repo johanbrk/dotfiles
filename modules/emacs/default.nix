@@ -114,7 +114,7 @@
         ];
 
         makeFlags = (prev.makeFlags or []) ++ [
-          "CFLAGS=-O3 -march=native -fgcse-las -fgcse-sm -pipe -fno-semantic-interposition"
+          "CFLAGS=-O3 -march=x86-64-v3 -fgcse-las -fgcse-sm -pipe -fno-semantic-interposition"
         ];
       }));
     };
