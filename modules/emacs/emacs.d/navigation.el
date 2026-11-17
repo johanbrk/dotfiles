@@ -153,9 +153,6 @@
 
 ;; Beframe provides buffer isolation to frames.
 (use-package beframe
-  ;; Don't add *scratch* to global list.
-  :custom (beframe-global-buffers '("*Messages*" "*Warnings*"))
-
   :config
   (beframe-mode)
   ;; Got the following configuration from https://protesilaos.com/emacs/beframe.
@@ -171,7 +168,7 @@ With optional argument FRAME, return the list of buffers of FRAME."
 
     (defvar beframe-consult-source
       `( :name     "Frame-specific buffers (current frame)"
-         :narrow   ?F
+         :narrow   ?f
          :category buffer
          :face     beframe-buffer
          :history  beframe-history
@@ -179,7 +176,9 @@ With optional argument FRAME, return the list of buffers of FRAME."
          :action   ,#'switch-to-buffer
          :state    ,#'consult--buffer-state))
 
-    (add-to-list 'consult-buffer-sources 'beframe-consult-source)))
+    (add-to-list 'consult-buffer-sources 'beframe-consult-source))
+  :custom
+  (beframe-create-frame-scratch-buffer nil))
 
 ;; Swap dired mode's default behavior to not open a new buffer every time.
 (use-package dired
